@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 
 import './index.css';
+import axios from 'axios'
+
+
 
 
 /*const App = () => {
@@ -469,28 +472,33 @@ const anecdotes = [
   'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.'
 ]*/
 import App from './App'
-const notes = [
+
+
+const persons = [
   {
     id: 1,
-    content: 'HTML is easy',
-    date: '2019-05-30T17:30:31.098Z',
-    important: true,
+    name: 'Juan',
+    number:33333
+    
   },
   {
     id: 2,
-    content: 'Browser can execute only JavaScript',
-    date: '2019-05-30T18:39:34.091Z',
-    important: false,
+    name: 'Julio',
+    number:33323
+   
   },
   {
     id: 3,
-    content: 'GET and POST are the most important methods of HTTP protocol',
-    date: '2019-05-30T19:20:14.298Z',
-    important: true,
+    name: 'Julia',
+    number:33333
+   
   },
 ]
 
-
-ReactDOM.render(<App notes={notes} />, 
-  document.getElementById('root')
-)
+axios.get('http://localhost:3001/posts').then(response => {
+  const notes = response.data
+  ReactDOM.render(
+    <App notes={notes} />,
+    document.getElementById('root')
+  )
+})

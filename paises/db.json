@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "content": "uno",
+      "title": "json-server",
+      "author": "typicode",
+      "important": true
+    },
+    {
+      "content": "dos",
+      "date": "2022-03-05T18:46:23.418Z",
+      "important": false,
+      "id": 4
+    },
+    {
+      "content": "agregar",
+      "date": "2022-03-05T18:49:20.063Z",
+      "important": false,
+      "id": 5
+    },
+    {
+      "content": "gg",
+      "date": "2022-03-05T19:43:47.415Z",
+      "important": true,
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "persons": [
+    {
+      "id": 1,
+      "name": "Juan",
+      "number": 33333
+    },
+    {
+      "id": 3,
+      "name": "Julia",
+      "number": 33333
+    }
+  ]
+}
