@@ -62,7 +62,8 @@ const UserState =(props) =>{
         let config ={
             headers: {
                 "access_token":state.auth.AccessToken ,
-                "Content-Type":"application/json"
+                "Content-Type":"application/json",
+             
              
     
         }
@@ -109,7 +110,8 @@ const UserState =(props) =>{
         let config ={
             headers: {
                 "access_token":state.auth.AccessToken ,
-                "Content-Type":"application/json"
+                "Content-Type":"application/json",
+             
              
     
         }

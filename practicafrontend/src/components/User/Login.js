@@ -1,6 +1,8 @@
 import React, { useContext, useEffect,useState } from "react"
 import { useNavigate} from "react-router-dom"
 import UserContext from '../../context/UserContext'
+import './../../App.css'
+import { Table, Form, Button } from 'react-bootstrap'
 const Login = () => {
     const {loginApi,state,logOut} = useContext(UserContext)
     const [ User, setUser ] = useState('')
@@ -19,7 +21,7 @@ const Login = () => {
    
     const navigate = useNavigate()
     const padding = {
-      paddingRight: 5,
+      paddingRight: 10,
       "display": "inline"
     }
     const onSubmit = (event) => {
@@ -52,9 +54,9 @@ const Login = () => {
     return (
       <>
      {!isLogged?
-     <form style={padding} onSubmit={onSubmit}><input  placeholder={'User'} onChange={handleUserChange}/> <input type={"password"} placeholder={'Password'} onChange={handlePasswordChange}/> <button>Login</button></form>
+     <Form style={padding} onSubmit={onSubmit}> <Form.Group style={padding}><input className="css-input"  placeholder={'User'} onChange={handleUserChange}/> <input className="css-input" type={"password"} placeholder={'Password'} onChange={handlePasswordChange}/> <button className="myButton" variant="primary" type="submit">Login</button></Form.Group></Form >
      : 
-     <div style={padding}>{User}<button  onClick={() =>logout()}>Cerrar Sesion</button></div>
+     <div className="myText" style={padding}>{User}<button className="myButton2"  onClick={() =>logout()}>Cerrar Sesion</button></div>
      }
      
      

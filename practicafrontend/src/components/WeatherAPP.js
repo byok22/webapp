@@ -44,7 +44,7 @@ const WeatherAPP = () => {
 
   return (
     <div >
-       <div>debug: {filter}</div>
+     
       <Filter filter={filter} search={search} />
 
       {

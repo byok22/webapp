@@ -19,9 +19,9 @@ return (
 
   
     <div> 
-      <h2>Name: {selectedUser==null?User.user.name:selectedUser.user.name}</h2>
-      <h3>Id: {selectedUser==null?User.user.id:selectedUser.user.id}</h3>
-      <h3>Email: {selectedUser==null?User.user.email:selectedUser.user.email}</h3>
+      <h4>Name: {selectedUser==null?User.user.name:selectedUser.user.name}</h4>
+      <h5>Id: {selectedUser==null?User.user.id:selectedUser.user.id}</h5>
+      <h5>Email: {selectedUser==null?User.user.email:selectedUser.user.email}</h5>
     </div>
   )
 }

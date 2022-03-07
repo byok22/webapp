@@ -1,6 +1,7 @@
 
 import React, { useContext, useEffect,useState } from "react"
 import UserContext from './../context/UserContext'
+import { Table } from 'react-bootstrap'
 const CFDIS = () => {
   const {getResume} = useContext(UserContext)
   const [ Resume, setResume ] = useState({
@@ -41,9 +42,9 @@ useEffect(()=>{
   
 return(
     <div> 
-      <h2>Resumen de CFDIS Mes actual y Ejercicio</h2>
+      <h5>Resumen de CFDIS Mes actual y Ejercicio</h5>
 
-      <table>
+      <Table striped>
       <thead>
         <tr>
         <th></th>
@@ -67,7 +68,7 @@ return(
           <td>${Resume.excercise.Neto}</td>
         </tr>
         </tbody>
-      </table>
+      </Table>
 
     </div>
   )
